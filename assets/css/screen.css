@@ -24,6 +24,8 @@
 
 @import url(normalize.css);
 
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+
 
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
@@ -91,6 +93,7 @@ body {
     font-size: 2.0rem;
     line-height: 1.6em;
     color: #3A4145;
+    border-color: lightgray;
 }
 
 ::-moz-selection {
@@ -110,7 +113,9 @@ h4, h5, h6 {
     text-rendering: optimizeLegibility;
     line-height: 1;
     margin-top: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: Lato, "Helvetica Neue", Helvetica, 'Open Sans', sans-serif;
+    font-weight: light;
+    margin-bottom: 0.4em;
 }
 
 h1 {
@@ -158,8 +163,9 @@ h4 a, h5 a, h6 a {
 }
 
 
-p, ul, ol {
+p, ul, ol, pre {
     margin: 1.6em 0;
+    margin-top: .2em;
 }
 
 ol ol, ul ul,
@@ -235,6 +241,8 @@ code, tt {
     font-family: Inconsolata, monospace, sans-serif;
     font-size: 0.85em;
     white-space: pre;
+    word-break: break-all;
+    
     border: 1px solid #E3EDF3;
     background: #F7FAFB;
     border-radius: 2px;
@@ -243,12 +251,13 @@ code, tt {
 pre {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 1.6em 0;
     border: 1px solid #E3EDF3;
     width: 100%;
     padding: 10px;
     font-family: Inconsolata, monospace, sans-serif;
     font-size: 0.9em;
+    line-height: 1;
+    
     white-space: pre;
     overflow: auto;
     background: #F7FAFB;
@@ -256,7 +265,7 @@ pre {
 }
 
 pre code, tt {
-    font-size: inherit;
+    font-size: 0.85em;
     white-space: -moz-pre-wrap;
     white-space: pre-wrap;
     background: transparent;
@@ -362,12 +371,15 @@ table.plain {
     display: table;
     width: 100%;
     height: 60%;
+    max-height: 400px;
     margin-bottom: 5rem;
     text-align: center;
     color: #fff;
-    background: #303538 no-repeat center center;
-    background-size: cover;
+    
+    background: url(/assets/images/head1.png);
+    background-size: 100% 100%;
 }
+
 
 /* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
 #blog-logo img {
@@ -377,6 +389,11 @@ table.plain {
     margin: 0 auto;
     line-height: 0;
 }
+a#blog-logo {
+    color: inherit;
+    text-decoration: none;
+}
+
 
 #back {
     color: rgba(0,0,0,0.2);
@@ -392,6 +409,7 @@ table.plain {
     margin: 10px 0 10px 0;
     font-size: 5rem;
     letter-spacing: -1px;
+    font-weight: 300;
 }
 
 .blog-description {
@@ -406,13 +424,27 @@ table.plain {
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
-    width:80%;
-    max-width: 700px;
     margin: 4rem auto;
     padding-bottom: 4rem;
     border-bottom: #EBF2F6 1px solid;
     word-break: break-word;
     hyphens: auto;
+}
+
+.post-header {
+    position: relative;
+    display: table;
+    width: 100%;
+}
+
+.post,
+.post-head-content {
+    width:80%;
+    max-width: 700px;
+}
+
+.post-head-content {
+    margin: 0 auto;
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
@@ -454,6 +486,7 @@ table.plain {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
     color: #9EABB3;
+    line-height: 1.2em;
 }
 
 .post-meta a {
@@ -463,6 +496,10 @@ table.plain {
 
 .post-meta a:hover {
     text-decoration: underline;
+}
+
+.byline::before {
+    content: '- '
 }
 
 .user-meta {
@@ -526,7 +563,18 @@ table.plain {
 
 /* Insert some mad padding up in the header for better spacing */
 .post-template .post-header {
-    padding: 60px 0;
+    padding-bottom: 0.6rem;
+}
+
+/* Insert some mad padding up in the header for better spacing */
+.post-template .post-header .blog-title {
+    font-size: 2rem;
+    margin: 0.4em 0;
+    font-weight: normal;
+}
+
+.post-content h2 {
+    border-bottom: 1px solid #EBF2F6;
 }
 
 /* Keep large images within the bounds of the post-width */
@@ -807,10 +855,6 @@ table.plain {
         padding-bottom: 1rem;
     }
 
-    .post-template .post-header {
-        padding: 40px 0;
-    }
-
     h1 {
         font-size: 4.8rem;
         text-indent: -2px;
@@ -885,10 +929,6 @@ table.plain {
 
     .post-template .post {
         padding-bottom: 0;
-    }
-
-    .post-template .post-header {
-        padding: 30px 0;
     }
 
     .post-meta {
