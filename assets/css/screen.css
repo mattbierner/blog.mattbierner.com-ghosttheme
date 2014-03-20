@@ -90,8 +90,8 @@ body {
     height: 100%;
     max-height: 100%;
     font-family: 'Droid Serif', serif;
-    font-size: 2.0rem;
-    line-height: 1.6em;
+    line-height: 1.4em;
+    font-size: 15px;
     color: #3A4145;
     border-color: lightgray;
 }
@@ -846,11 +846,6 @@ a#blog-logo {
         line-height: 1.5em;
     }
 
-    .post {
-        font-size: 0.9em;
-        line-height: 1.6em;
-    }
-
     .post-template .post {
         padding-bottom: 1rem;
     }
@@ -896,8 +891,6 @@ a#blog-logo {
         width:auto;
         margin-left: 16px;
         margin-right: 16px;
-        font-size: 0.8em;
-        line-height: 1.6em;
     }
 
     #site-head {
@@ -911,7 +904,6 @@ a#blog-logo {
     .blog-description {
         font-size: 1.5rem;
     }
-
 
     h1, h2 {
         font-size: 3rem;
