@@ -149,12 +149,13 @@ h6 {
 }
 
 a {
-    color: #4a4a4a;
-    transition: color ease 0.3s;
+    color: #57A3E8;
+    text-decoration: none;
 }
 
 a:hover {
     color: #57A3E8;
+    text-decoration: underline;
 }
 
 h1 a, h2 a, h3 a,
@@ -164,8 +165,7 @@ h4 a, h5 a, h6 a {
 
 
 p, ul, ol, pre {
-    margin: 1.6em 0;
-    margin-top: .2em;
+    margin: 0.2em 0 1.2em 0;
 }
 
 ol ol, ul ul,
@@ -255,7 +255,6 @@ pre {
     width: 100%;
     padding: 10px;
     font-family: Inconsolata, monospace, sans-serif;
-    font-size: 0.9em;
     line-height: 1;
     
     white-space: pre;
