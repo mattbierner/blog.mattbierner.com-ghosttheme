@@ -246,7 +246,7 @@ code, tt {
 }
 
 code, tt, pre {
-    background: #f6f6f6;
+    background: #f8f8f8;
 }
 
 pre {
@@ -702,6 +702,38 @@ a#blog-logo {
 .older-posts:hover,
 .newer-posts:hover {
     border-color: #9EABB3;
+}
+
+/* ==========================================================================
+  Post Pagination
+   ========================================================================== */
+
+.post-pagination-link {
+    display: block;
+    position: fixed;
+    top: 50%;
+    height: 0;
+    padding: 1.6rem;
+    font-size: 4rem;
+    color: inherit;
+}
+
+.post-pagination-link:hover {
+    text-decoration: none;
+}
+
+.prev-post {
+    left: 0;
+}
+.prev-post::after {
+    content: "\2329";
+}
+
+.next-post {
+    right: 0;
+}
+.next-post::after {
+    content: "\232a";
 }
 
 

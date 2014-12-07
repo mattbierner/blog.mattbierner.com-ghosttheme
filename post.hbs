@@ -41,9 +41,13 @@
         </section>
 
         <footer class="post-footer"></footer>
-
+        <span id="curr-post-uuid" style="visibility: hidden; display: none;">{{uuid}}</span>    
         {{/post}}
-
     </article>
-
+            
+    <nav class='post-pagination'>
+        <a title="Previous Post" class="post-pagination-link prev-post"></a>
+        <a title="Next Post" class="post-pagination-link next-post"></a>
+    </nav>
 </main>
+
