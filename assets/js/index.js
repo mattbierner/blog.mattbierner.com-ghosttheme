@@ -55,7 +55,7 @@ var SetupPagination = function() {
       // creates previous and next links
       createLinks: function(items){
         for (var i = 0; i < items.length; i++){
-          var uuid = $(items[i]).find('guid').text(); console.log((items[i+1]))
+          var uuid = $(items[i]).find('guid').text();
           if (uuid === curr){
             if (i < items.length-1){
               $prevLink
