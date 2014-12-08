@@ -242,11 +242,14 @@ code, tt {
     font-size: 0.85em;
     white-space: pre;
     word-break: break-all;
-   
 }
 
 code, tt, pre {
     background: #f8f8f8;
+}
+
+p > code {
+    word-wrap: break-word;
 }
 
 pre {
@@ -377,13 +380,15 @@ table.plain {
     background-size: 100% 100%;
 }
 
-
-/* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
-a#blog-logo {
+a#blog-logo img {
     color: inherit;
     text-decoration: none;
+    border-bottom: 2px solid transparent;
 }
 
+.post-header a#blog-logo:hover img {
+    border-bottom: 2px solid #333;
+}
 
 #back {
     color: rgba(0,0,0,0.2);
@@ -554,11 +559,6 @@ a#blog-logo {
 /* Kill that stylish little circle that was on the border, too */
 .post-template .post:after {
     display: none;
-}
-
-/* Insert some mad padding up in the header for better spacing */
-.post-template .post-header {
-    padding-bottom: 0.6rem;
 }
 
 /* Insert some mad padding up in the header for better spacing */
