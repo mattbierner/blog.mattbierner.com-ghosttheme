@@ -564,7 +564,7 @@ a#blog-logo img {
 .toc ul {
     list-style: none;
     padding-top: 0.2em;
-    parring-right: 2em;
+    padding-right: 2em;
 }
 
 .toc li {
@@ -578,11 +578,21 @@ a#blog-logo img {
 .toc .toc-h2 {
     list-style: none;
     padding-top: 0.2em;
+    border-top: 1px solid #f3f3f3;
+}
+
+.toc .toc-h2:first-child {
+    border-top: 0;
 }
 
 .toc .toc-h3 {
     list-style: none;
     padding-left: 1.2em;
+}
+
+
+.toc .toc-h3::before {
+    content: "\25e6  ";
     
 }
 
