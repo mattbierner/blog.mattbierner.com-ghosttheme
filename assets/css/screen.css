@@ -109,14 +109,19 @@ body {
 }
 
 h1, h2, h3,
-h4, h5, h6 {
+h4, h5, h6,
+.toc {
     text-rendering: optimizeLegibility;
-    line-height: 1;
-    margin-top: 0;
     font-family: Lato, "Helvetica Neue", helvetica, 'Open Sans', sans-serif;
     font-weight: 300;
+}
+h1, h2, h3,
+h4, h5, h6 {
+    line-height: 1;
+    margin-top: 0;
     margin-bottom: 0.4em;
 }
+
 
 h1 {
     font-size: 5rem;
@@ -162,7 +167,6 @@ h1 a, h2 a, h3 a,
 h4 a, h5 a, h6 a {
     color: #50585D;
 }
-
 
 p, ul, ol, pre {
     margin: 0.2em 0 1.2em 0;
@@ -544,6 +548,47 @@ a#blog-logo img {
     font-size: 1.4rem;
     line-height: 1.5em;
 }
+/* ==========================================================================
+   toc
+   ========================================================================== */
+
+.toc {
+    position: static;
+    max-width: 300px;
+    margin-left: -300px;
+    float: left;
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
+.toc ul {
+    list-style: none;
+    padding: 0.5em 0.2em;
+}
+
+.toc li {
+    padding-left: 0;
+}
+
+.toc a {
+    color: inherit;
+}
+
+.toc .toc-h2 {
+    list-style: none;
+    padding-top: 0.2em;
+}
+
+.toc .toc-h3 {
+    list-style: none;
+    padding-left: 1.2em;
+    
+}
+
+.toc .toc-active {
+    color: #57A3E8;
+}
+
 
 /* ==========================================================================
    5. Single Post - When you click on an individual post
@@ -575,6 +620,11 @@ a#blog-logo img {
 
 .post-content h2 {
     border-bottom: 1px solid #EBF2F6;
+}
+
+.post-content h2 a:hover, .post-content h3 a:hover {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Keep large images within the bounds of the post-width */
@@ -936,8 +986,15 @@ a#blog-logo img {
 }
 
 /* ==========================================================================
-   10. Media Queries - Smaller than 700px
+   10. Media Queries -
    ========================================================================== */
+@media only screen and (max-width: 1400px) {
+    .toc {
+        display: none;
+    }
+
+}
+   
 @media only screen and (max-width: 700px) {
 
     #blog-logo img {

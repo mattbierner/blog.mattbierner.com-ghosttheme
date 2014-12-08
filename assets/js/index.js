@@ -22,6 +22,10 @@
                   .after('<figcaption>' + $(this).attr("alt") + '</figcaption>');
         });
         
+        SetupLinks();
+        
+        SetupToc();
+        
         SetupPagination();
     });
 
@@ -98,4 +102,32 @@ var SetupPagination = function() {
   }();
  
   NextPrevLinksModule.init();
+};
+
+var SetupLinks = function() {
+    $('.post-content h2, .post-content h3')
+        .html(function(i, current) {
+            return $('<a href=#' + $(this).attr('id') +'>' + current + '</a>')
+        });
+};
+
+/**
+ * Render the table of contents.
+ * 
+ * Seriously Ghost WTF!
+ */
+var SetupToc = function() {
+  $('.post-content').prepend($("<nav class='toc'></nav>"));
+    
+    $('.toc').toc({
+        container: '.post-content',
+        'smoothScrolling': false
+    });
+    
+   $(window).scroll(function() {
+           
+       var headerH = $('.post-content').offset().top; console.log(headerH);
+       var scrollVal = $(this).scrollTop();
+       $('.toc').css({'position': scrollVal > headerH ? 'fixed' : 'static', 'top' :'0'});
+    });
 };
