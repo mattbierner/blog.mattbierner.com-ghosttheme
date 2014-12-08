@@ -563,7 +563,8 @@ a#blog-logo img {
 
 .toc ul {
     list-style: none;
-    padding: 0.5em 0.2em;
+    padding-top: 0.2em;
+    parring-right: 2em;
 }
 
 .toc li {
