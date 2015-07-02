@@ -648,7 +648,6 @@ a#blog-logo img {
 .post-content figcaption {
     text-align: center;
     font-style: italic;
-    font-family: helvetic;
     font-size: 0.9em;
 }
 
@@ -697,24 +696,6 @@ a#blog-logo img {
 .post-footer .share a:hover {
     color: #50585D;
 }
-
-
-/* ==========================================================================
-   6. Third Party Elements - Embeds from other services
-   ========================================================================== */
-
-/* Github */
-
-.gist table {
-    margin: 0;
-    font-size: 1.4rem;
-}
-
-.gist .line-number {
-    min-width: 25px;
-    font-size: 1.1rem;
-}
-
 
 /* ==========================================================================
    7. Pagination - Tools to let you flick between pages
