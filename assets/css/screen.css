@@ -24,9 +24,6 @@
 
 @import url(normalize.css);
 
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
-
-
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
    ========================================================================== */
@@ -75,7 +72,6 @@
     content: "\e004";
 }
 
-
 /* ==========================================================================
    2. General - Setting up some base styles
    ========================================================================== */
@@ -89,11 +85,11 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: Garamond, serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     line-height: 1.25em;
-    font-size: 18px;
-    color: #3A4145;
-    border-color: lightgray;
+    font-size: 16px;
+    color: #333;
+    border-color: #333;
 }
 
 ::-moz-selection {
@@ -112,9 +108,9 @@ h1, h2, h3,
 h4, h5, h6,
 .toc {
     text-rendering: optimizeLegibility;
-    font-family: Lato, "Helvetica Neue", helvetica, 'Open Sans', sans-serif;
     font-weight: 300;
 }
+
 h1, h2, h3,
 h4, h5, h6 {
     line-height: 1;
@@ -126,15 +122,11 @@ h4, h5, h6 {
 h1 {
     font-size: 4rem;
     line-height: 1.2em;
-    letter-spacing: -2px;
-    text-indent: -3px;
 }
 
 h2 {
     font-size: 3.4rem;
     line-height: 1.2em;
-    letter-spacing: -1px;
-    text-indent: -2px;
 }
 
 h3 {
@@ -165,7 +157,7 @@ a:hover {
 
 h1 a, h2 a, h3 a,
 h4 a, h5 a, h6 a {
-    color: #50585D;
+    color: inherit;
 }
 
 p, ul, ol, pre {
@@ -554,11 +546,13 @@ a#blog-logo img {
 
 .toc {
     position: static;
-    max-width: 300px;
+    width: 260px;
+    max-height: 100%;
     margin-left: -300px;
+    overflow-y: scroll;
     float: left;
     font-weight: 300;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 .toc ul {
@@ -576,9 +570,8 @@ a#blog-logo img {
 }
 
 .toc .toc-h2 {
-    list-style: none;
     padding-top: 0.2em;
-    border-top: 1px solid #f3f3f3;
+    border-top: 1px solid #ddd;
 }
 
 .toc .toc-h2:first-child {
@@ -586,14 +579,13 @@ a#blog-logo img {
 }
 
 .toc .toc-h3 {
-    list-style: none;
+    margin-left: 0.6em;
     padding-left: 1.2em;
+    text-indent: -0.8em;
 }
-
 
 .toc .toc-h3::before {
     content: "\25e6  ";
-    
 }
 
 .toc .toc-active {
@@ -630,7 +622,7 @@ a#blog-logo img {
 }
 
 .post-content h2 {
-    border-bottom: 1px solid #EBF2F6;
+    border-bottom: 1px solid #ddd;
 }
 
 .post-content h2 a:hover, .post-content h3 a:hover {
@@ -831,12 +823,11 @@ a#blog-logo img {
     margin: 8rem 0 0 0;
     padding: 4rem 0;
     border-top: #EBF2F6 1px solid;
-    font-family:"Helvetica Neue", helvetica, 'Open Sans', sans-serif;;
     font-size: 1.3rem;
     line-height: 1.7em;
     color: #BBC7CC;
     text-align: center;
-    background: #F7FAFB;
+    background: #fafafa;
 }
 
 .site-footer a {

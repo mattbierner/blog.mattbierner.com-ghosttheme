@@ -125,7 +125,6 @@ var SetupToc = function() {
     });
     
    $(window).scroll(function() {
-           
        var headerH = $('.post-content').offset().top; console.log(headerH);
        var scrollVal = $(this).scrollTop();
        $('.toc').css({'position': scrollVal > headerH ? 'fixed' : 'static', 'top' :'0'});
