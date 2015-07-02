@@ -24,6 +24,9 @@
 
 @import url(normalize.css);
 
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+
+
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
    ========================================================================== */
@@ -108,6 +111,8 @@ h1, h2, h3,
 h4, h5, h6,
 .toc {
     text-rendering: optimizeLegibility;
+    font-family: Lato, "Helvetica Neue", helvetica, 'Open Sans', sans-serif;
+    color: #50585D;
     font-weight: 300;
 }
 
@@ -122,11 +127,13 @@ h4, h5, h6 {
 h1 {
     font-size: 4rem;
     line-height: 1.2em;
+    letter-spacing: -2px;
 }
 
 h2 {
     font-size: 3.4rem;
     line-height: 1.2em;
+    text-indent: -2px;
 }
 
 h3 {
