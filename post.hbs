@@ -1,23 +1,17 @@
 {{!< default}}
 
-{{! The comment above "< default" means - insert everything in this file into
-    the {body} of the default.hbs template, which contains our header/footer. }}
-
-        {{! Each post has the blog logo at the top, with a link back to the home page }}
-        <header class="post-header">
-            <div class="vertical">
-                <div id="post-head-content" class="inner">
-                    <a id="blog-logo" href="{{@blog.url}}">
-                        <h1 class="blog-title"><img alt="{{@blog.title}}" src="/assets/images/uwtb-post.svg" /></h1>
-                    </a>
-                </div>
-            </div>
-        </header>
+<header class="post-header">
+    <div class="vertical">
+        <div id="post-head-content" class="inner">
+            <a id="blog-logo" href="{{@blog.url}}">
+                <h1 class="blog-title"><img alt="{{@blog.title}}" src="/assets/images/uwtb-post.svg" /></h1>
+            </a>
+        </div>
+    </div>
+</header>
 
 <main class="content" role="main">
-
     <article class="{{post_class}}">
-
         {{! Everything inside the #post tags pulls data from the post }}
         {{#post}}
 
@@ -35,6 +29,11 @@
         <section class="post-content">
             {{content}}
         </section>
+        
+        <section>
+            <div id='discourse-comments'></div>
+        </section>
+        
 
         <footer class="post-footer">
             <nav class='post-pagination footer-pagination'>
@@ -53,3 +52,14 @@
     </nav>
 </main>
 
+<script type="text/javascript">
+    DiscourseEmbed = {
+        discourseUrl: window.location.protocol + '//chrono-synclastic-infundibulum.' + window.location.hostname + window.location.pathname,
+        discourseEmbedUrl: window.location.protocol + '//' + window.location.hostname + window.location.pathname };
+
+    (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+    })();
+</script>
